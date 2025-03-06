@@ -18,6 +18,8 @@ RUN cd /var/piper \
 RUN mkdir -p /output
 
 ADD ./piper.sh /scripts/piper.sh
+RUN chown webhookd:webhookd /scripts/piper.sh
+RUN chmod +x /scripts/piper.sh
 
 USER webhookd
 
