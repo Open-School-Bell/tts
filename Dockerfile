@@ -6,7 +6,7 @@ ARG PIPER_VERSION=1.2.0
 USER root
 
 RUN apk add wget libstdc++
-RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=amd64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=aarch64; else ARCHITECTURE=amd64; fi \
+RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=amd64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=arm64; else ARCHITECTURE=amd64; fi \
     && cd /tmp \
     && wget https://github.com/rhasspy/piper/releases/download/v${PIPER_VERSION}/piper_${ARCHITECTURE}.tar.gz \
     && tar -xvf piper_${ARCHITECTURE}.tar.gz \
