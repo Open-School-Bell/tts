@@ -16,6 +16,7 @@ RUN cd /var/piper \
     && wget https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_GB/southern_english_female/low/en_GB-southern_english_female-low.onnx.json?download=true.json -O model.onnx.json
 
 RUN mkdir -p /output
+RUN chmod 777 /output
 
 ADD ./piper.sh /scripts/piper.sh
 RUN chown webhookd:webhookd /scripts/piper.sh
