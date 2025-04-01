@@ -26,7 +26,7 @@ ADD ./status.sh /scripts/status.sh
 RUN chown webhookd:webhookd /scripts/status.sh
 RUN chmod +x /scripts/status.sh
 
-RUN echo {'"version"': '"1.0.0"', '"piperVersion"': '"'${PIPER_VERSION}'"'} > /var/piper/status.json
+RUN echo {'"version"': '"1.0.1"', '"piperVersion"': '"'${PIPER_VERSION}'"'} > /var/piper/status.json
 
 USER webhookd
 
