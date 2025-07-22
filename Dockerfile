@@ -13,7 +13,7 @@ RUN python3 -m pip install piper-tts[http]==${PIPER_VERSION}
 RUN python3 -m piper.download_voices en_GB-southern_english_female-low
 
 # Put the current verion, piper version and python version into the status file
-RUN echo {'"version"': '"1.1.0"', '"piperVersion"': '"'${PIPER_VERSION}'"', '"pythonVersion"': '"'${PYTHON_VERSION}'"'} > /app/status.json
+RUN echo {'"version"': '"2.0.0"', '"piperVersion"': '"'${PIPER_VERSION}'"', '"pythonVersion"': '"'${PYTHON_VERSION}'"'} > /app/status.json
 
 EXPOSE 80
 
